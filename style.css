@@ -1,0 +1,363 @@
+*{
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    background-color: #202124;
+    color: aliceblue;
+}
+
+
+ /* Configurações do Cabeçalho*/
+
+
+#cabecalho{ /*Configuração do espaço que ficará o menu*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 35px;
+    padding-top: 5px;
+}
+
+#menu{ /*Configuração do espaço que ficam os itens*/
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.item{ /*Configuração do espaço que ficam as ancoras*/
+    margin-left: 20px;
+    text-align: center;
+}
+
+.item a{ /*Configuração das ancoras*/
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.g{  /*Configuração do circulo que fica o G*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(26, 32, 81);
+    border-radius: 20px;
+}
+
+.bloco{ /*Configuração do text G*/
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+ /* Fim das Configurações do Cabeçalho*/
+
+
+/*Conteúdo principal*/
+
+
+#principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.container{ /*Configurações da área que o conteúdo vai ficar*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#google{ /*Espaçamento da imagem*/
+    margin-bottom: 30px;
+}
+
+
+#google img{  /* Configurações da Imagem*/
+    width: 300px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#pesquisa{/*Configurações da área pesquisa*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1pt solid rgb(86, 86, 86);
+    border-radius: 40px;
+    height: 45px;
+    width: 600px;
+    transition: background .4s;
+}
+
+#pesquisa:hover{ /*O que vai acontecer quando eu passar o mouse sobre a área pesquisa*/
+    background-color: rgb(42, 42, 42);
+    border: 0 none;
+    cursor:text;
+}
+
+.itens{ /*Alinhamento dos itens*/
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#lupa{ /*Espaçamento da lupa*/
+    margin-left: 10px;
+}
+
+
+/*Configuração do input*/
+
+.itens input{
+    background-color: transparent;
+    border: none;
+    word-wrap: break-word;
+    color: aliceblue;
+    margin-left: 10px;
+    height: 50px;
+    width: 450px;
+    
+}
+
+input:focus{  /*Configuração que tira a borda quando eu clico no input*/
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    
+}
+
+    /*Configuração do input*/
+
+/*Fim da configuração dos itens a esquerda da área de pesquisa*/
+
+
+/*Configuração dos itens a esquerda da área de pesquisa*/
+.direita{
+    margin-right: 20px;
+}
+
+#teclado,
+#microfone,
+#camera{
+    margin-left: 15px;
+    font-size: 17px;
+
+}
+
+
+/*Configuração dos botões*/
+
+.row{
+    flex-direction: row;
+}
+
+.botoes{
+    margin: 20px;
+}
+
+
+.botoes button{
+    background-color: #303134;
+    border: 1px solid #303134;
+    font-size: 14px;
+    color: #fff;
+    min-width: 54px;
+    height: 36px;
+    border-radius: 5px;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+/*Fim da Configuração dos botões*/
+
+
+.fa-solid{ /*Conguração para o cursos mudar quando eu passo o mouse sob os itens*/
+    cursor: pointer;
+}
+
+/*Fim da configuração dos itens a direita da área de pesquisa*/
+
+
+
+/*Configurações do rodapé */
+
+#rodape{
+    display: flex;
+    flex-direction: column;
+    background-color:#171717 ;
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    color: rgb(162, 162, 162);
+    
+}
+
+#blocoA{ /*Brasil*/
+    text-align: justify;
+    border-bottom: 1pt solid rgb(103, 103, 103);
+    font-size: 15px;
+    font-weight: 100;
+    padding: 20px;
+}
+
+#blocoB{ /*Espaço Links do rodapé*/
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    font-size: 14px;
+    padding: 20px;
+}
+
+#blocoB a{  /*Configuração dos links*/
+    text-decoration: none;
+    color: rgb(162, 162, 162);
+    margin-right: 20px;
+}
+
+#Quem_fez a{
+    text-decoration: none;
+    color: rgb(162, 162, 162);
+}
+
+
+/*Layout Responsivo*/
+
+@media ( min-width:614px) and (max-width:786px){
+    #blocoA{
+        display: none;
+    }
+
+    #blocoB{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #link_direita{
+        padding-top: 6px;
+        text-align: right;
+    }
+}
+
+@media (min-width:425px) and (max-width:614px){
+
+    #rodape{
+        display:none;
+    }
+
+    #principal{
+        margin-top:50px;
+    }
+
+    .itens input {
+        width: 220px;
+    }
+
+    #pesquisa{
+        width: 400px;
+    }
+}
+
+@media (min-width:408px) and (max-width:426px){
+
+    #rodape{
+        display: none;
+    }
+
+    .itens input {
+        width: 220px;
+    }
+
+    #pesquisa{
+        width: 400px;
+    }
+
+    .botoes{
+        display: none;
+    }
+
+    #principal{
+        margin-top:80px;
+    }
+
+    #google img{
+        width: 270px;
+    }
+}
+
+@media (min-width:365px) and (max-width:408px){
+    #rodape{
+        display: none;
+    }
+
+    .itens input {
+        width: 220px;
+        
+    }
+
+    #pesquisa{
+        width: 363px;
+    }
+
+    .botoes{
+        display: none;
+    }
+        
+    #principal{
+        margin-top:80px;
+    }
+
+    #google img{
+        width: 270px;
+    }
+}
+
+@media (max-width:365px){
+    #rodape{
+        display: none;
+    }
+
+    .itens input {
+        width: 220px;
+        
+    }
+
+    #pesquisa{
+        width: 295px;
+    }
+
+    .botoes{
+        display: none;
+    }
+        
+    #principal{
+        margin-top:80px;
+    }
+
+    #google img{
+        width: 260px;
+    }
+
+    .direita{
+        display: none;
+    }
+
+    #Quem_fez{
+        display:none;
+    }
+
+    #cabecalho{
+        justify-content: right;
+    }
+}
